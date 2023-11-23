@@ -1,3 +1,14 @@
+@extends('pagplantilla')
+
+section('titulo')
+    <h1>Pagina Galeria </h1>
+@endesections
+
+@section('seccion')
+<h3 Codijo de la foto {{ $valor}} h3>
+@endesection
+
+
 <!doctype html>
 <html lang="en">
   <head>
