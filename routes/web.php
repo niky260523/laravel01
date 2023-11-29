@@ -7,7 +7,7 @@ Route::get('/saludo', function () {
     return "Hola mundo desde laravel...";
 });
 
-Route::get('/galaria/{num}', function ($num) {
+Route::get('/galeria/{num}', function ($num) {
     return "Este es el codigo de la foto desde laravel: ".$num;
 }) -> where('num', '[0-9]+');
 
