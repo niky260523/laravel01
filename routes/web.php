@@ -11,7 +11,7 @@ Route::get('/galeria/{num}', function ($num) {
     return "Este es el codigo de la foto desde laravel: ".$num;
 }) -> where('num', '[0-9]+');
 
-
+Route::view('/detalle/{id}', [PagesController::class, 'fnEstDetalle']) -> name('Estudiante.xDetalle'); 
 Route::view('/galeria', 'pagGaleria', ['valor' => 15]) -> name('xGaleria'); 
 Route::view('/inicio', 'pagInicio', ['valor' => 15]) -> name('xInicio');
 
