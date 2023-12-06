@@ -1,7 +1,7 @@
 <?php
 
-
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PagesController;
 
 Route::get('/saludo', function () {
     return "Hola mundo desde laravel...";
@@ -10,6 +10,7 @@ Route::get('/saludo', function () {
 Route::get('/galeria/{num}', function ($num) {
     return "Este es el codigo de la foto desde laravel: ".$num;
 }) -> where('num', '[0-9]+');
+
 
 Route::view('/galeria', 'pagGaleria', ['valor' => 15]) -> name('xGaleria'); 
 Route::view('/inicio', 'pagInicio', ['valor' => 15]) -> name('xInicio');
