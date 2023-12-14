@@ -7,6 +7,8 @@ Route::get('/saludo', function () {
     return "Hola mundo desde laravel...";
 });
 
+Route::post('/registrar',[PagesController::class 'fnRegistrar'])->name('Estudiante.xRegistrar');
+
 Route::get('/galeria/{num}', function ($num) {
     return "Este es el codigo de la foto desde laravel: ".$num;
 }) -> where('num', '[0-9]+');
@@ -19,6 +21,10 @@ Route::get('/lista', function (){
     return view('pagLista');
 }) -> name('xLista');
 
+Route::get('/listase', function (){
+    return view('paglistaseguimiento');
+}) -> name('xListaSeguimiento');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -28,8 +34,6 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
-
-
 
 /*
 Route::get('/', function () {

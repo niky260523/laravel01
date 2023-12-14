@@ -1,3 +1,27 @@
+@extends('pagPlantilla')
+
+@section('titulo')
+<h1>Pagina Lista</h1>
+@endsection
+@section('seccion')
+  <form action="" method="POST" >
+    @csrf 
+
+    <input type="text" placeholder="Nombre" class="form-control mb-2"> 
+   <div class="btn btn-dark fs-3 fw-bold d-grid">lista</div>
+  <table class="table">
+    <thead class="table-dark">
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Codigo</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellido</th>
+      <th scope="col">Fecha de nacimiento</th>
+    </tr>
+    </thead>
+     
+    
+@endsection
 <!doctype html>
 <html lang="en">
   <head>
